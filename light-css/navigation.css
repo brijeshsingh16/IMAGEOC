@@ -1,0 +1,211 @@
+/*==============================
+    Navigation
+==============================*/
+
+.nav-list
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:2.4rem;
+
+    list-style:none;
+}
+
+
+/*==============================
+    Nav Link
+==============================*/
+
+.nav-link
+{
+    position:relative;
+
+    padding:.55rem 0;
+
+    text-decoration:none;
+
+    font-size:.96rem;
+
+    font-weight:600;
+
+    color:var(--text-secondary);
+
+    transition:var(--transition);
+}
+
+.nav-link:hover
+{
+    color:var(--text-primary);
+}
+
+
+/*==============================
+    Underline Animation
+==============================*/
+
+.nav-link::after
+{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-2px;
+
+    width:100%;
+    height:3px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    transform:scaleX(0);
+
+    transform-origin:right;
+
+    transition:transform .35s ease;
+}
+
+.nav-link:hover::after
+{
+    transform:scaleX(1);
+
+    transform-origin:left;
+}
+
+
+/*==============================
+    Active Link
+==============================*/
+
+.nav-link.active
+{
+    color:var(--accent);
+
+    font-weight:700;
+}
+
+.nav-link.active::after
+{
+    transform:scaleX(1);
+}
+
+
+/*==============================
+    Keyboard Focus
+==============================*/
+
+.nav-link:focus-visible,
+.btn:focus-visible,
+.submit-btn:focus-visible
+{
+    outline:2px solid var(--accent);
+
+    outline-offset:4px;
+
+    border-radius:6px;
+}
+
+
+/*==============================
+    Mobile Toggle
+==============================*/
+
+.menu-toggle
+{
+    width:42px;
+    height:32px;
+
+    position:relative;
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    cursor:pointer;
+
+    z-index:1001;
+}
+
+
+/*==============================
+    Hamburger Lines
+==============================*/
+
+.menu-toggle span
+{
+    position:absolute;
+
+    right:0;
+
+    height:3px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    transition:.35s ease;
+}
+
+.menu-toggle span:nth-child(1)
+{
+    top:0;
+
+    width:100%;
+}
+
+.menu-toggle span:nth-child(2)
+{
+    top:14px;
+
+    width:72%;
+}
+
+.menu-toggle span:nth-child(3)
+{
+    bottom:0;
+
+    width:86%;
+}
+
+
+/*==============================
+    Active Hamburger
+==============================*/
+
+.menu-toggle.active span:nth-child(1)
+{
+    top:14px;
+
+    width:100%;
+
+    transform:rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2)
+{
+    opacity:0;
+
+    transform:translateX(10px);
+}
+
+.menu-toggle.active span:nth-child(3)
+{
+    bottom:15px;
+
+    width:100%;
+
+    transform:rotate(-45deg);
+}

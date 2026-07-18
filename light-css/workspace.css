@@ -1,0 +1,603 @@
+/*============== WORKSPACE ==============*/
+
+.workspace
+{
+    padding:120px 0;
+
+    position:relative;
+
+    background:#F8FAFC;
+
+    animation:workspaceShow .5s ease;
+}
+
+.workspace.hidden
+{
+    display:none;
+}
+
+
+/*=====================================
+    HEADER
+=====================================*/
+
+.workspace-header
+{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    margin-bottom:4rem;
+}
+
+.workspace-close
+{
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border-radius:16px;
+
+    border:1px solid rgba(220, 24, 24, 0.18);
+
+    background:#ecc8c8;
+
+    color:#EF4444;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.workspace-close:hover
+{
+    background:#EF4444;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 14px 30px rgba(239,68,68,.22);
+}
+
+
+/*=====================================
+    GRID
+=====================================*/
+
+.workspace-grid
+{
+    display:grid;
+
+    grid-template-columns:1.45fr .85fr;
+
+    gap:2rem;
+}
+
+
+/*=====================================
+    PREVIEW CARD
+=====================================*/
+
+.workspace-preview
+{
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:2rem;
+
+    min-height:560px;
+
+    box-shadow:0 10px 35px rgba(15,23,42,.05);
+}
+
+
+/*=====================================
+    UPLOAD AREA
+=====================================*/
+
+.upload-area
+{
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:1rem;
+
+    border:2px dashed rgba(99,102,241,.25);
+
+    border-radius:18px;
+
+    background:#FAFBFF;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.upload-area:hover
+{
+    border-color:var(--accent);
+
+    background:#F4F7FF;
+
+    transform:translateY(-2px);
+}
+
+.upload-area.drag-active
+{
+    border-color:var(--accent);
+
+    background:#EEF4FF;
+
+    transform:scale(1.02);
+}
+
+.upload-area i
+{
+    font-size:4rem;
+
+    color:var(--accent);
+}
+
+.upload-area h3
+{
+    font-size:1.65rem;
+
+    color:var(--text-primary);
+}
+
+.upload-area p
+{
+    color:var(--text-secondary);
+}
+
+
+/*=====================================
+    IMAGE PREVIEW
+=====================================*/
+
+.image-preview
+{
+    position:relative;
+
+    width:100%;
+
+    min-height:500px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    background:#F8FAFC;
+}
+
+.image-preview.hidden
+{
+    display:none;
+}
+
+.image-preview img
+{
+    display:block;
+
+    max-width:100%;
+
+    max-height:500px;
+
+    width:auto;
+
+    height:auto;
+
+    border-radius:12px;
+}
+/*=====================================
+    RIGHT PANEL
+=====================================*/
+
+.workspace-controls
+{
+    background:#FFFFFF;
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:2rem;
+
+    height:fit-content;
+
+    box-shadow:0 10px 35px rgba(15,23,42,.05);
+}
+
+.workspace-controls h3
+{
+    margin-bottom:2rem;
+
+    color:var(--text-primary);
+
+    font-size:1.35rem;
+}
+
+
+/*=====================================
+    CONTROL GROUP
+=====================================*/
+
+.control-group
+{
+    margin-bottom:1.8rem;
+}
+
+.control-group label
+{
+    display:block;
+
+    margin-bottom:.75rem;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    color:var(--text-primary);
+}
+
+
+/*=====================================
+    INPUTS
+=====================================*/
+
+.control-group input,
+.control-group select
+{
+    width:100%;
+}
+
+
+/* Select */
+
+.control-group select
+{
+    height:52px;
+
+    padding:0 16px;
+
+    border-radius:14px;
+
+    border:1px solid #D6DCE8;
+
+    background:#FFFFFF;
+
+    color:var(--text-primary);
+
+    font-size:15px;
+
+    font-weight:500;
+
+    outline:none;
+
+    transition:.25s ease;
+}
+
+.control-group select:hover
+{
+    border-color:#A5B4FC;
+}
+
+.control-group select:focus
+{
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(99,102,241,.12);
+}
+
+
+/* Input */
+
+.control-group input
+{
+    height:52px;
+
+    padding:0 16px;
+
+    border-radius:14px;
+
+    border:1px solid #D6DCE8;
+
+    background:#FFFFFF;
+
+    color:var(--text-primary);
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.control-group input:hover
+{
+    border-color:#A5B4FC;
+}
+
+.control-group input:focus
+{
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(99,102,241,.12);
+}
+
+
+/* Disabled */
+
+.control-group input:disabled,
+.control-group select:disabled
+{
+    background:#F1F5F9;
+
+    color:#94A3B8;
+
+    cursor:not-allowed;
+
+    border-color:#E2E8F0;
+}
+
+
+/*=====================================
+    BUTTONS
+=====================================*/
+
+.control-buttons
+{
+    display:flex;
+
+    gap:1rem;
+
+    margin-top:2.5rem;
+}
+
+.control-buttons .btn
+{
+    flex:1;
+}
+/*=========================
+    IMAGE RESIZE UI
+=========================*/
+
+.input-row
+{
+    display:grid;
+
+    grid-template-columns:120px 1fr;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:22px;
+}
+
+.input-row label
+{
+    margin:0;
+
+    color:var(--text-primary);
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+
+/*=========================
+    INPUT + UNIT
+=========================*/
+
+.input-unit
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:100%;
+}
+
+.input-unit input
+{
+    width:100%;
+
+    height:54px;
+
+    padding:0 18px;
+
+    background:#FFFFFF;
+
+    color:var(--text-primary);
+
+    border:1px solid #D6DCE8;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    outline:none;
+
+    transition:.25s ease;
+}
+
+.input-unit input:hover
+{
+    border-color:#A5B4FC;
+}
+
+.input-unit input:focus
+{
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(99,102,241,.12);
+}
+
+.input-unit input:disabled
+{
+    background:#F1F5F9;
+
+    color:#94A3B8;
+
+    border-color:#E2E8F0;
+
+    cursor:not-allowed;
+}
+
+
+/*=========================
+    UNIT LABEL
+=========================*/
+
+.input-unit span
+{
+    min-width:58px;
+
+    height:54px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#F8FAFC;
+
+    color:#64748B;
+
+    border:1px solid #D6DCE8;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+
+/*=========================
+    CHECKBOX
+=========================*/
+
+.checkbox-row
+{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:24px 0;
+}
+
+.checkbox-row label
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin:0;
+
+    color:var(--text-primary);
+
+    font-size:15px;
+
+    font-weight:600;
+}
+
+.checkbox-row input[type="checkbox"]
+{
+    width:20px;
+
+    height:20px;
+
+    accent-color:var(--accent);
+
+    cursor:pointer;
+}
+
+
+/*=========================
+    RESIZE %
+=========================*/
+
+#resizePercent
+{
+    width:100%;
+
+    height:54px;
+
+    padding:0 18px;
+
+    background:#FFFFFF;
+
+    color:var(--text-primary);
+
+    border:1px solid #D6DCE8;
+
+    border-radius:14px;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    outline:none;
+
+    transition:.25s ease;
+}
+
+#resizePercent:hover
+{
+    border-color:#A5B4FC;
+}
+
+#resizePercent:focus
+{
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(99,102,241,.12);
+}
+
+#resizePercent:disabled
+{
+    background:#F1F5F9;
+
+    color:#94A3B8;
+
+    border-color:#E2E8F0;
+
+    cursor:not-allowed;
+}

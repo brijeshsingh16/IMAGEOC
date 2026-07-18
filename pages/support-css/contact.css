@@ -1,0 +1,177 @@
+/*=========================================
+    CONTACT PAGE
+=========================================*/
+
+.contact-layout
+{
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:50px;
+    align-items:center;
+}
+
+
+/*=========================================
+    LEFT SIDE
+=========================================*/
+
+.contact-info
+{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.contact-image
+{
+    width:100%;
+    max-width:520px;
+
+    margin:auto;
+
+    display:block;
+}
+
+
+/*=========================================
+    FORM WRAPPER
+=========================================*/
+
+.contact-form-wrapper
+{
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+}
+
+.contact-form-wrapper:hover
+{
+    box-shadow:var(--shadow-lg);
+}
+
+
+/*=========================================
+    FORM GRID
+=========================================*/
+
+.form-grid
+{
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+}
+
+
+/*=========================================
+    FORM GROUP
+=========================================*/
+
+.form-group
+{
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:24px;
+}
+
+.form-group label
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:var(--text-primary);
+}
+
+.form-group label i
+{
+    color:var(--accent);
+}
+
+
+/*=========================================
+    INPUTS
+=========================================*/
+
+.form-group input,
+.form-group select,
+.form-group textarea
+{
+    width:100%;
+
+    padding:15px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    background:var(--bg-light);
+
+    color:var(--text-primary);
+
+    font-size:.95rem;
+
+    font-family:inherit;
+
+    transition:var(--transition);
+
+    outline:none;
+
+    resize:none;
+}
+
+.form-group textarea
+{
+    min-height:180px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus
+{
+    border-color:var(--accent);
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder
+{
+    color:var(--text-muted);
+}
+
+
+/*=========================================
+    BUTTON
+=========================================*/
+
+.contact-form .btn
+{
+    width:100%;
+
+    margin-top:10px;
+
+    padding:16px;
+}
+
+.contact-form .btn i
+{
+    margin-right:10px;
+}

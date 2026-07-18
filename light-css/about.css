@@ -1,0 +1,152 @@
+/* =============== ABOUT SECTION =============== */
+
+.about
+{
+    padding:120px 0;
+    position:relative;
+
+    background:linear-gradient(
+        180deg,
+        #F8FAFC 0%,
+        #F5F7FB 100%
+    );
+}
+
+
+/* GRID */
+
+.about-grid
+{
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:4rem;
+
+    align-items:center;
+}
+
+
+/* LEFT */
+
+.about-content p
+{
+    margin-bottom:1rem;
+
+    color:var(--text-secondary);
+
+    line-height:1.9;
+}
+
+
+/* STATS */
+
+.about-stats
+{
+    display:flex;
+
+    gap:2rem;
+
+    margin-top:2.8rem;
+
+    flex-wrap:wrap;
+}
+
+.stat
+{
+    min-width:120px;
+}
+
+.stat h3
+{
+    font-size:2rem;
+
+    font-weight:700;
+
+    color:var(--accent);
+
+    margin-bottom:.35rem;
+}
+
+.stat p
+{
+    font-size:.95rem;
+
+    color:var(--text-muted);
+}
+
+
+/* RIGHT */
+
+.about-visual
+{
+    display:grid;
+
+    gap:1.5rem;
+}
+
+
+/* CARD */
+
+.about-card
+{
+    padding:1.8rem;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    background:var(--bg-card);
+
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+
+    transition:var(--transition);
+}
+
+.about-card i
+{
+    width:52px;
+    height:52px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:14px;
+
+    background:rgba(79,70,229,.08);
+
+    color:var(--accent);
+
+    font-size:1.35rem;
+
+    margin-bottom:1rem;
+}
+
+.about-card h4
+{
+    margin-bottom:.75rem;
+
+    color:var(--text-primary);
+}
+
+.about-card p
+{
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+    line-height:1.8;
+}
+
+.about-card:hover
+{
+    transform:translateY(-8px);
+
+    border-color:var(--accent);
+
+    box-shadow:
+        0 18px 40px rgba(79,70,229,.10);
+}

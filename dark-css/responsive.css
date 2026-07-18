@@ -1,0 +1,357 @@
+/*=========== Responsive =========== */
+@media(max-width:1200px)
+{
+    .multi-grid
+    {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+@media (max-width: 992px) 
+{   
+    .features-grid
+    {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .footer-grid
+    {
+        grid-template-columns:repeat(2,1fr);
+
+        gap:3rem;
+    }
+
+    .bottom-flex
+    {
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+        gap:.75rem;
+    }
+    .workspace
+    {
+        padding: 80px 0;
+    }
+
+    .workspace-grid
+    {
+        grid-template-columns: 1.4fr .9fr;
+        gap: 1.5rem;
+    }
+
+    .workspace-preview,
+    .workspace-controls
+    {
+        padding: 1.5rem;
+    }
+
+    .workspace-preview
+    {
+        min-height: 450px;
+    }
+
+    .image-preview img
+    {
+        max-height: 380px;
+    }
+}
+@media(max-width:900px)
+{
+    .multi-layout
+    {
+        grid-template-columns:1fr;
+    }
+    .multi-preview
+    {
+        min-height: auto; /* Prevents empty space on smaller screens */
+    }
+    .multi-grid
+    {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+@media (max-width: 576px) 
+{
+	.features-grid
+    {
+        grid-template-columns:1fr;
+    }
+}
+@media (max-width:480px)
+{
+    .hero h1
+    {
+        font-size:2.1rem;
+    }
+
+    .hero-badge
+    {
+        font-size:.8rem;
+    }
+    .workspace
+    {
+        padding: 60px 0;
+    }
+
+    .workspace-header h2
+    {
+        font-size: 1.6rem;
+    }
+
+    .workspace-header p
+    {
+        font-size: .95rem;
+    }
+
+    .workspace-preview
+    {
+        min-height: 300px;
+    }
+
+    .image-preview img
+    {
+        max-height: 240px;
+    }
+
+    .upload-area
+    {
+        gap: .75rem;
+    }
+
+    .upload-area i
+    {
+        font-size: 2.5rem;
+    }
+
+    .upload-area h3
+    {
+        font-size: 1.15rem;
+    }
+
+    .workspace-controls h3
+    {
+        font-size: 1.2rem;
+    }
+
+    .control-group
+    {
+        margin-bottom: 1.5rem;
+    }
+
+    .control-group label
+    {
+        font-size: .95rem;
+    }
+}
+@media (max-width:768px)
+{
+	.section-heading h2
+	{
+        font-size:2rem;
+    }
+    .menu-toggle
+	{
+        display:block;
+    }
+    /* Hide desktop switch */
+
+    .theme-toggle
+    {
+        display:none;
+    }
+
+    /* Show mobile switch */
+
+    .mobile-theme-toggle
+    {
+        display:flex;
+        justify-content:center;
+        margin-top:2rem;
+        list-style:none;
+    }
+    .navbar
+	{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:280px;
+        height:100vh;
+        background:rgba(10,10,15,.95);
+        backdrop-filter:blur(20px);
+        display:flex;
+        justify-content:flex-start;
+		align-items:flex-start;
+		padding-top:100px;
+        opacity:0;
+        visibility:hidden;
+        transition:all .4s ease;
+    }
+    .navbar.active
+	{
+        right:0;
+        opacity:1;
+        visibility:visible;
+    }
+    .nav-list
+	{
+        display:flex;      /* IMPORTANT */
+        flex-direction:column;
+        gap:2rem;
+        list-style:none;
+		padding-left:2rem;
+    }
+	.hero
+    {
+        padding:110px 0 70px;
+    }
+
+    .hero h1
+    {
+        font-size:2.6rem;
+    }
+
+    .hero p
+    {
+        font-size:1rem;
+    }
+
+    .hero-buttons
+    {
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn
+    {
+        width:220px;
+    }
+    .about-grid
+    {
+        grid-template-columns:1fr;
+        gap:3rem;
+    }
+
+    .about-stats
+    {
+        justify-content:space-between;
+        gap:1rem;
+    }
+    .workspace
+    {
+        padding: 70px 0;
+    }
+    .workspace-grid
+{
+    grid-template-columns: 1fr;
+}
+
+.workspace-header
+{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.workspace-close
+{
+    align-self: flex-end;
+    width: 42px;
+    height: 42px;
+}
+    .workspace-preview
+    {
+        min-height: 350px;
+        padding: 1.2rem;
+    }
+
+    .workspace-controls
+    {
+        padding: 1.2rem;
+    }
+
+    .upload-area
+    {
+        padding: 2rem 1rem;
+        text-align: center;
+    }
+
+    .upload-area i
+    {
+        font-size: 3rem;
+    }
+
+    .upload-area h3
+    {
+        font-size: 1.3rem;
+    }
+
+    .upload-area p
+    {
+        font-size: .95rem;
+    }
+
+    .control-buttons
+    {
+        flex-direction: column;
+    }
+
+    .control-buttons .btn
+    {
+        width: 100%;
+    }
+     .footer-grid
+    {
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+        gap:3rem;
+    }
+
+    .footer-brand p
+    {
+        margin:1.5rem auto 0;
+    }
+
+    .footer-nav ul,
+    .footer-support ul
+    {
+        align-items:center;
+    }
+
+    .social-row
+    {
+        justify-content:center;
+    }
+
+    .main-footer
+    {
+        padding:6rem 0 3rem;
+    }
+
+    .footer-bottom
+    {
+        padding-top:3rem;
+    }
+}
+@media(max-width:700px)
+{
+    .control-row
+    {
+        grid-template-columns:1fr;
+    }
+}
+@media(max-width:500px)
+{
+    .multi-grid
+    {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); 
+        gap: 12px;
+    }
+    .multi-upload h3
+    {
+        font-size: 20px; /* Keeps the upload text from wrapping awkwardly */
+    }
+}

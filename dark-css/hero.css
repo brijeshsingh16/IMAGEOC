@@ -1,0 +1,232 @@
+/*================ HERO ================*/
+
+.hero
+{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:120px 0 80px;
+    position:relative;
+    overflow:hidden;
+}
+.hero::before
+{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+
+    background:
+        /* Top */
+        linear-gradient(
+            to bottom,
+            rgba(5,7,10,.95) 0%,
+            rgba(5,7,10,.65) 10%,
+            transparent 30%
+        ),
+
+        /* Bottom */
+        linear-gradient(
+            to top,
+            rgba(5,7,10,.95) 0%,
+            rgba(5,7,10,.65) 10%,
+            transparent 30%
+        ),
+
+        /* Left */
+        linear-gradient(
+            to right,
+            rgba(5,7,10,.9) 0%,
+            rgba(5,7,10,.55) 10%,
+            transparent 25%
+        ),
+
+        /* Right */
+        linear-gradient(
+            to left,
+            rgba(5,7,10,.9) 0%,
+            rgba(5,7,10,.55) 10%,
+            transparent 25%
+        ),
+
+        /* Soft center vignette */
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(5,7,10,.18) 60%,
+            rgba(5,7,10,.45) 78%,
+            rgba(5,7,10,.9) 100%
+        );
+}
+.hero-bg
+{
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+
+    background-color:#101014;
+
+    background-image:
+        repeating-linear-gradient(0deg,
+            rgba(255,255,255,0.06) 0,
+            rgba(255,255,255,0.06) 1px,
+            transparent 1px,
+            transparent 60px
+        ),
+        repeating-linear-gradient(45deg,
+            rgba(99,102,241,0.08) 0,
+            rgba(99,102,241,0.08) 1px,
+            transparent 1px,
+            transparent 40px
+        ),
+        repeating-linear-gradient(-45deg,
+            rgba(168,85,247,0.07) 0,
+            rgba(168,85,247,0.07) 1px,
+            transparent 1px,
+            transparent 50px
+        ),
+        radial-gradient(circle at 60% 40%,
+            rgba(99,102,241,0.06),
+            transparent 60%
+        );
+
+    opacity:1;
+}
+.hero-content
+{
+    position:relative;
+    z-index:2;
+}
+
+.hero-content
+{
+    text-align:center;
+    max-width:850px;
+    margin:0 auto;
+}
+
+
+/* Heading */
+.hero h1
+{
+    font-size:clamp(2.6rem,6vw,5.5rem);
+    line-height:1.1;
+    margin-bottom:1.5rem;
+}
+
+.hero h1 span
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary),
+        #ec4899
+    );
+
+    background-size:300% 300%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:gradientFlow 8s ease infinite;
+}
+
+/* Paragraph */
+.hero p
+{
+    font-size:1.1rem;
+    max-width:700px;
+    margin:0 auto;
+    color:var(--text-secondary);
+}
+
+/* Buttons */
+.hero-buttons
+{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin-top:3rem;
+    flex-wrap:wrap;
+}
+
+/* Button base */
+.btn
+{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:.95rem 2rem;
+    border-radius:12px;
+
+    font-weight:600;
+    text-decoration:none;
+
+    transition:var(--transition);
+}
+
+/* Primary */
+.btn-primary
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+    color:#fff;
+}
+
+.btn-primary:hover
+{
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(99,102,241,.3);
+}
+
+/* Secondary */
+.btn-secondary
+{
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--border);
+    color:var(--text-primary);
+}
+
+.btn-secondary:hover
+{
+    background:rgba(255,255,255,.06);
+    border-color:var(--border-hover);
+}
+
+/* Disabled Button */
+.btn:disabled
+{
+    opacity:0.45;
+    cursor:not-allowed;
+    pointer-events:none;
+    transform:none;
+    box-shadow:none;
+}
+
+
+.btn-primary:disabled
+{
+    background:rgba(255,255,255,.08);
+    color:var(--text-muted);
+}
+
+
+.btn-secondary:disabled
+{
+    background:rgba(255,255,255,.02);
+    border-color:var(--border);
+    color:var(--text-muted);
+}
+/* Animation */
+@keyframes gradientFlow
+{
+    0%{ background-position:0% 50%; }
+    50%{ background-position:100% 50%; }
+    100%{ background-position:0% 50%; }
+}
