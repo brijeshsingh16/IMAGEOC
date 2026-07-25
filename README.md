@@ -10,7 +10,7 @@
 
 ## 🌐 Live Demo
 
-👉 https://imageoc.vercel.app/
+👉 [https://imageoc.vercel.app/](https://www.imageoc.com/)
 
 ---
 
