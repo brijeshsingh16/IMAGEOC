@@ -1,0 +1,287 @@
+/*============== TOOLS SECTION ==============*/
+
+.tools
+{
+    padding:120px 0 20px;
+
+    background:#F8FAFC;
+}
+
+
+/* GRID */
+
+.tools-grid
+{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:1.5rem;
+}
+
+
+/* SECTION DESCRIPTION */
+
+.section-heading p
+{
+    max-width:700px;
+
+    margin:1.2rem auto 0;
+
+    color:var(--text-secondary);
+
+    line-height:1.8;
+}
+
+
+/*=========================
+    FILTER
+=========================*/
+
+.tool-filter
+{
+    display:flex;
+
+    justify-content:center;
+
+    gap:1rem;
+
+    margin:3rem 0 4rem;
+
+    flex-wrap:wrap;
+}
+
+.filter-btn
+{
+    display:flex;
+
+    align-items:center;
+
+    gap:.55rem;
+
+    padding:.9rem 1.6rem;
+
+    border-radius:999px;
+
+    border:1px solid var(--border);
+
+    background:#FFFFFF;
+
+    color:var(--text-secondary);
+
+    cursor:pointer;
+
+    box-shadow:0 6px 18px rgba(15,23,42,.04);
+
+    transition:var(--transition);
+}
+
+.filter-btn:hover
+{
+    border-color:var(--accent);
+
+    color:var(--accent);
+
+    transform:translateY(-2px);
+}
+
+.filter-btn.active
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    color:#fff;
+
+    border-color:transparent;
+
+    box-shadow:0 12px 28px rgba(79,70,229,.22);
+}
+
+
+/*=========================
+    CARD
+=========================*/
+
+.tool-card
+{
+    display:block;
+
+    text-decoration:none;
+
+    color:inherit;
+
+    padding:1.7rem;
+
+    border-radius:18px;
+
+    border:1px solid var(--border);
+
+    background:#FFFFFF;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+
+    transition:var(--transition);
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.tool-card::before
+{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    transform:scaleX(0);
+
+    transition:.35s;
+}
+
+.tool-card:hover::before
+{
+    transform:scaleX(1);
+}
+
+
+/* TOP */
+
+.tool-top
+{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:1.4rem;
+}
+
+
+/* ICON */
+
+.tool-left
+{
+    width:56px;
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:rgba(79,70,229,.08);
+
+    transition:.3s;
+}
+
+.tool-left i
+{
+    font-size:1.35rem;
+
+    color:var(--accent);
+
+    margin:0;
+
+    transition:.3s;
+}
+
+
+/* BADGE */
+
+.tool-type
+{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:.4rem .9rem;
+
+    border-radius:999px;
+
+    background:rgba(79,70,229,.08);
+
+    color:var(--accent);
+
+    font-size:.72rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+
+    margin:0;
+}
+
+
+/* TITLE */
+
+.tool-card h4
+{
+    margin-bottom:.6rem;
+
+    color:var(--text-primary);
+
+    font-size:1.15rem;
+}
+
+
+/* DESCRIPTION */
+
+.tool-card p
+{
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+    line-height:1.7;
+}
+
+
+/* HOVER */
+
+.tool-card:hover
+{
+    transform:translateY(-10px);
+
+    border-color:#C7D2FE;
+
+    box-shadow:0 22px 45px rgba(79,70,229,.12);
+}
+
+.tool-card:hover .tool-left
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+}
+
+.tool-card:hover .tool-left i
+{
+    color:#fff;
+
+    transform:scale(1.15);
+}

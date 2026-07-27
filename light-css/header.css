@@ -1,0 +1,111 @@
+/*============== Header ==============*/
+
+.main-header
+{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+    box-shadow:0 6px 24px rgba(15,23,42,.04);
+
+    transition:var(--transition);
+}
+
+
+/* Slightly stronger header while scrolling */
+
+.main-header.scrolled
+{
+    background:rgba(255,255,255,.95);
+
+    box-shadow:0 10px 30px rgba(15,23,42,.08);
+}
+
+
+/*============== Container ==============*/
+
+.header-container
+{
+    max-width:1300px;
+
+    margin:0 auto;
+
+    padding:1.15rem 2rem;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+
+/*============== Logo ==============*/
+
+.logo
+{
+    font-family:var(--font-heading);
+
+    font-size:1.7rem;
+
+    font-weight:800;
+
+    color:var(--text-primary);
+
+    text-decoration:none;
+
+    letter-spacing:-.05em;
+
+    transition:var(--transition);
+}
+.logo-img
+{
+    height: 40px;           /* Adjust height as needed to fit header */
+    width: auto;            /* Maintains original aspect ratio */
+    object-fit: contain;
+    display: block;
+}
+.logo-dark {
+  display: none;
+}
+.logo-light {
+  display: block;
+}
+.logo:hover
+{
+    transform:translateY(-2px);
+}
+
+/*=========================================
+    THEME TOGGLE
+=========================================*/
+
+/* Desktop Switch */
+
+.theme-toggle
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:1.5rem;
+}
+
+/* Mobile Switch */
+
+.mobile-theme-toggle
+{
+    display:none;
+}

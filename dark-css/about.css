@@ -1,0 +1,85 @@
+/* =============== ABOUT SECTION =============== */
+
+.about
+{
+    padding:120px 0;
+    position:relative;
+}
+
+/* GRID LAYOUT */
+.about-grid
+{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    gap:4rem;
+    align-items:center;
+}
+
+/* LEFT CONTENT */
+.about-content p
+{
+    margin-bottom:1rem;
+    color:var(--text-secondary);
+}
+
+/* STATS */
+.about-stats
+{
+    display:flex;
+    gap:2rem;
+    margin-top:2.5rem;
+    flex-wrap:wrap;
+}
+
+.stat h3
+{
+    font-size:1.8rem;
+    color:var(--text-primary);
+}
+
+.stat p
+{
+    font-size:.9rem;
+    color:var(--text-muted);
+}
+
+/* RIGHT CARDS */
+.about-visual
+{
+    display:grid;
+    gap:1.5rem;
+}
+
+.about-card
+{
+    padding:1.5rem;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    transition:var(--transition);
+}
+
+.about-card i
+{
+    font-size:1.3rem;
+    color:var(--accent);
+    margin-bottom:.8rem;
+}
+
+.about-card h4
+{
+    margin-bottom:.5rem;
+}
+
+.about-card p
+{
+    color:var(--text-secondary);
+    font-size:.95rem;
+}
+
+.about-card:hover
+{
+    transform:translateY(-5px);
+    border-color:var(--border-hover);
+    background:rgba(255,255,255,0.04);
+}

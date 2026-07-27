@@ -1,0 +1,146 @@
+/* =============== FEATURES SECTION =============== */
+
+.features
+{
+    padding:120px 0;
+
+    position:relative;
+
+    background:var(--bg-light);
+}
+
+
+/* GRID */
+
+.features-grid
+{
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:2rem;
+
+    margin-top:4rem;
+}
+
+
+/* CARD */
+
+.feature-card
+{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:2rem;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    background:#FFFFFF;
+
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+
+    transition:var(--transition);
+}
+
+
+/* ICON */
+
+.feature-card i
+{
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:1.5rem;
+
+    border-radius:16px;
+
+    background:rgba(99,102,241,.10);
+
+    color:var(--accent);
+
+    font-size:1.4rem;
+
+    transition:var(--transition);
+}
+
+
+/* TEXT */
+
+.feature-card h3
+{
+    margin-bottom:.7rem;
+
+    font-size:1.2rem;
+
+    color:var(--text-primary);
+}
+
+.feature-card p
+{
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+    line-height:1.8;
+}
+
+
+/* HOVER EFFECT */
+
+.feature-card::before
+{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:radial-gradient(
+        circle at top left,
+        rgba(99,102,241,.12),
+        transparent 70%
+    );
+
+    opacity:0;
+
+    transition:var(--transition);
+
+    pointer-events:none;
+}
+
+.feature-card:hover
+{
+    transform:translateY(-8px);
+
+    border-color:#C7D2FE;
+
+    box-shadow:0 20px 45px rgba(99,102,241,.15);
+}
+
+.feature-card:hover::before
+{
+    opacity:1;
+}
+
+.feature-card:hover i
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    color:#FFFFFF;
+
+    transform:scale(1.08);
+}

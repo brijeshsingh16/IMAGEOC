@@ -1,0 +1,384 @@
+/*==================================================
+    MULTI WORKSPACE
+==================================================*/
+
+.multi-workspace
+{
+    padding:120px 0;
+    position:relative;
+    animation:workspaceShow .45s ease;
+}
+
+.multi-workspace.hidden
+{
+    display:none;
+}
+
+
+/*==================================================
+    LAYOUT
+==================================================*/
+
+.multi-layout
+{
+    display:grid;
+    grid-template-columns:1.45fr .85fr;
+    gap:2rem;
+}
+
+
+/*==================================================
+    LEFT PANEL
+==================================================*/
+
+.multi-preview
+{
+    background:rgba(255,255,255,.02);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    min-height:620px;
+}
+
+
+/*==================================================
+    UPLOAD AREA
+==================================================*/
+
+.multi-upload
+{
+    min-height:560px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:18px;
+
+    border:2px dashed rgba(99,102,241,.25);
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.multi-upload:hover
+{
+    border-color:var(--accent);
+
+    background:rgba(99,102,241,.05);
+}
+
+.multi-upload i
+{
+    font-size:64px;
+
+    color:var(--accent);
+}
+
+.multi-upload h3
+{
+    font-size:28px;
+}
+
+.multi-upload p
+{
+    color:var(--text-secondary);
+    text-align: center;
+    padding: 5px;
+}
+
+
+/*==================================================
+    FILE COUNTER
+==================================================*/
+
+.multi-file-info
+{
+    margin:20px 0;
+
+    text-align:right;
+
+    color:var(--text-secondary);
+
+    font-size:.9rem;
+
+    font-weight:600;
+}
+
+.multi-file-info.hidden
+{
+    display:none;
+}
+
+
+/*==================================================
+    GRID
+==================================================*/
+
+.multi-grid
+{
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill, minmax(80px, 1fr));
+
+    gap:18px;
+}
+
+.multi-grid.hidden
+{
+    display:none;
+}
+
+
+/*==================================================
+    FILE CARD
+==================================================*/
+
+.multi-card
+{
+    position:relative;
+}
+
+.multi-card img
+{
+    width:100%;
+   aspect-ratio: 1 / 1;
+
+    object-fit:cover;
+
+    display:block;
+
+    border-radius:12px;
+}
+
+.multi-card span
+{
+    display:block;
+
+    margin-top:10px;
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    font-size:.8rem;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    text-overflow:ellipsis;
+}
+
+
+/*==================================================
+    REMOVE BUTTON
+==================================================*/
+
+.remove-file
+{
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    width:30px;
+
+    height:30px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+
+    z-index:10;
+}
+
+.remove-file:hover
+{
+    background:#dc2626;
+
+    transform:scale(1.08);
+}
+
+
+/*==================================================
+    ADD MORE CARD
+==================================================*/
+
+.add-more-card
+{
+    aspect-ratio:1/1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    border:2px dashed rgba(99,102,241,.25);
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.add-more-card:hover
+{
+    border-color:var(--accent);
+
+    background:rgba(99,102,241,.08);
+}
+
+.add-more-card i
+{
+    font-size:30px;
+
+    color:var(--accent);
+}
+
+.add-more-card span
+{
+    font-size:.9rem;
+
+    color:var(--text-secondary);
+}
+
+
+/*==================================================
+    RIGHT PANEL
+==================================================*/
+
+.multi-controls
+{
+    background:rgba(255,255,255,.02);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:2rem;
+
+    height:fit-content;
+}
+
+.multi-controls h3
+{
+    margin-bottom:2rem;
+}
+
+
+/*==================================================
+    DYNAMIC CONTROLS
+==================================================*/
+
+.control-row
+{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+
+    margin-bottom:20px;
+}
+
+.control-group
+{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.control-group label
+{
+    font-size:.95rem;
+
+    font-weight:600;
+}
+
+.control-group select,
+.control-group input
+{
+    width:100%;
+
+    height:50px;
+
+    padding:0 14px;
+
+    background:#111827;
+
+    color:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    outline:none;
+
+    transition:.25s;
+}
+
+.control-group select:focus,
+.control-group input:focus
+{
+    border-color:var(--accent);
+}
+
+
+/*==================================================
+    BUTTONS
+==================================================*/
+
+.multi-buttons
+{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+    margin-top:30px;
+}
+
+.multi-buttons .btn
+{
+    width:100%;
+}
+.multi-buttons .btn i 
+{
+    margin-right: 8px;
+}

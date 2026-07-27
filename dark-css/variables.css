@@ -1,0 +1,16 @@
+/* =========== Premium Dark Minimalist Core Design Engine - Interactive Edition =============== */
+:root 
+{
+    --bg-dark: #05070a;
+    --bg-card: #0b0f17;
+    --accent: #6366f1;
+    --accent-secondary: #a855f7; /* Purple accent for gradients */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #475569;
+    --border: rgba(255, 255, 255, 0.05);
+    --border-hover: rgba(255, 255, 255, 0.15);
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}

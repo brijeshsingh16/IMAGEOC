@@ -1,0 +1,32 @@
+@import url("variables.css");
+@import url("reset.css");
+@import url("typography.css");
+
+
+@import url("header.css");
+@import url("navigation.css");
+@import url("switch.css");
+@import url("hero.css");
+@import url("tools.css");
+@import url("workspace.css");
+@import url("multi-workspace.css");
+@import url("features.css");
+@import url("about.css");
+
+@import url("footer.css");
+
+@import url("responsive.css");
+@import "./image-css/image-to-pdf.css";
+/* Smoothly animate background colors and text colors when stylesheets switch */
+body, 
+header, 
+.navbar, 
+.nav-link, 
+section, 
+div, 
+p, 
+h1, 
+h2, 
+h3 {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}

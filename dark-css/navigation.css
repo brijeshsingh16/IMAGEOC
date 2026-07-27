@@ -1,0 +1,110 @@
+/*========= Navigation Bar ==========*/
+.nav-list 
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2.5rem;
+}
+.nav-link 
+{
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: var(--transition);
+}
+.nav-link::after 
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.nav-link:hover 
+{
+    color: var(--text-primary);
+}
+.nav-link:focus-visible,
+.btn:focus-visible,
+.submit-btn:focus-visible
+{
+    outline:2px solid var(--accent);
+    outline-offset:4px;
+}
+.nav-link:hover::after 
+{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.nav-link.active
+{
+    color:var(--text-primary);
+}
+.nav-link.active::after
+{
+    transform:scaleX(1);
+}
+
+
+/*========== Nvabar Menu Toggle =========*/
+.menu-toggle
+{
+	width:40px;
+	height:30px;
+	position:relative;
+	background:none;
+	border:none;
+	cursor:pointer;
+	z-index:1001;
+	display: none;
+}
+.menu-toggle span
+{
+	position:absolute;
+	height:3px;
+	right:0;
+	background:linear-gradient(90deg, #6366f1, #a855f7);
+	border-radius:10px;
+	transition:0.4s ease;
+}
+.menu-toggle span:nth-child(1)
+{
+	top:0;
+	width:100%;
+}
+
+.menu-toggle span:nth-child(2)
+{
+	top:13px;
+	width:70%;
+}
+.menu-toggle span:nth-child(3)
+{
+	bottom:0;
+	width:85%;
+}
+.menu-toggle.active span:nth-child(1)
+{
+	transform:rotate(45deg);
+	top:13px;
+	width:100%;
+}
+.menu-toggle.active span:nth-child(2)
+{
+	opacity:0;
+}
+.menu-toggle.active span:nth-child(3)
+{
+	transform:rotate(-45deg);
+	bottom:13px;
+	width:100%;
+}

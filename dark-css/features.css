@@ -1,0 +1,75 @@
+/* =============== FEATURES SECTION =============== */
+
+.features
+{
+    padding:120px 0;
+    position:relative;
+}
+
+/* GRID */
+.features-grid
+{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:2rem;
+    margin-top:4rem;
+}
+
+/* CARD */
+.feature-card
+{
+    padding:2rem;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:rgba(255,255,255,0.02);
+    transition:var(--transition);
+    position:relative;
+    overflow:hidden;
+}
+
+/* ICON */
+.feature-card i
+{
+    font-size:1.4rem;
+    color:var(--accent);
+    margin-bottom:1rem;
+}
+
+/* TEXT */
+.feature-card h3
+{
+    margin-bottom:.5rem;
+    font-size:1.2rem;
+}
+
+.feature-card p
+{
+    color:var(--text-secondary);
+    font-size:.95rem;
+}
+
+/* HOVER EFFECT */
+.feature-card::before
+{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(
+        circle at top left,
+        rgba(99,102,241,0.15),
+        transparent 60%
+    );
+    opacity:0;
+    transition:var(--transition);
+}
+
+.feature-card:hover
+{
+    transform:translateY(-6px);
+    border-color:var(--border-hover);
+}
+
+.feature-card:hover::before
+{
+    opacity:1;
+}

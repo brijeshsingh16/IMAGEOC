@@ -1,0 +1,69 @@
+/*============== Header ==============*/
+.main-header 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 7, 10, 0.2);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.header-container 
+{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo 
+{
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    text-decoration: none;
+    letter-spacing: -0.05em;
+    transition:var(--transition);
+}
+.logo-img
+{
+    height: 40px;           /* Adjust height as needed to fit header */
+    width: auto;            /* Maintains original aspect ratio */
+    object-fit: contain;
+    display: block;
+}
+.logo-light {
+  display: none;
+}
+.logo-dark {
+  display: block;
+}
+.logo:hover
+{
+    transform:translateY(-2px);
+}
+
+/*=========================================
+    THEME TOGGLE
+=========================================*/
+
+/* Desktop Switch */
+
+.theme-toggle
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-left:1.5rem;
+}
+
+/* Mobile Switch */
+
+.mobile-theme-toggle
+{
+    display:none;
+}

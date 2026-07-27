@@ -1,0 +1,996 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Image Compressor, PDF Tools & Image Converter | IMAGEOC</title>
+    <link rel="icon" type="image/png" href="photo/imageoc.png" />
+    <meta
+      name="description"
+      content="Compress images, convert JPG PNG WEBP, crop, resize, merge PDF, split PDF and create Image to PDF online. 100% browser based. Secure. Fast. Free."
+    />
+
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://imageoc.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IMAGEOC - Free Image & PDF Tools" />
+
+    <meta
+      property="og:description"
+      content="Compress images, convert formats, merge PDFs, split PDFs and more."
+    />
+
+    <meta property="og:image" content="imageoc" />
+
+    <meta property="og:url" content="https://imageoc.com/" />
+
+    <meta property="og:site_name" content="IMAGEOC" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:title" content="IMAGEOC" />
+
+    <meta
+      name="twitter:description"
+      content="Free browser based image and PDF tools."
+    />
+
+    <meta name="twitter:image" content="imageoc" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "IMAGEOC",
+        "url": "https://imageoc.com",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "description": "Free online Image and PDF tools including Compress Image, Resize Image, Crop Image, Merge PDF, Split PDF and Image to PDF.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD/INR"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IMAGEOC",
+        "url": "https://imageoc.com",
+        "logo": "https://imageoc.com/logo.png",
+        "sameAs": [
+          "https://twitter.com/...",
+          "https://facebook.com/...",
+          "https://linkedin.com/..."
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://imageoc.com",
+        "name": "IMAGEOC",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://imageoc.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Cropper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css"
+    />
+    <!-- Main CSS -->
+    <!-- Light CSS (Enabled by default) -->
+    <link
+      id="light-theme"
+      rel="stylesheet"
+      href="light-css/main.css"
+      media="all"
+    />
+
+    <!-- Dark CSS (Disabled by default) -->
+    <link
+      id="dark-theme"
+      rel="stylesheet"
+      href="dark-css/main.css"
+      media="not all"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!--External Script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+      <div class="header-container">
+        <!-- LOGO -->
+        <a href="#home" class="logo">
+          <img
+            src="photo/imageoc-white.jpeg"
+            alt="IMAGE OC Logo"
+            class="logo-img logo-light"
+          />
+          <img
+            src="photo/imageoc-black.jpeg"
+            alt="IMAGE OC Logo"
+            class="logo-img logo-dark"
+          />
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="#all-tools" class="nav-link">Tools</a></li>
+
+            <li><a href="#features" class="nav-link">Features</a></li>
+
+            <li><a href="#about" class="nav-link">About</a></li>
+
+            <!-- MOBILE THEME SWITCH -->
+            <li class="mobile-theme-toggle">
+              <!-- From Uiverse.io by Galahhad -->
+              <label class="ui-switch">
+                <input type="checkbox" id="theme-toggle-input" />
+                <div class="slider">
+                  <div class="circle"></div>
+                </div>
+              </label>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- THEME TOGGLE -->
+        <div class="theme-toggle">
+          <!-- From Uiverse.io by Galahhad -->
+          <label class="ui-switch">
+            <input type="checkbox" id="theme-toggle-input" />
+            <div class="slider">
+              <div class="circle"></div>
+            </div>
+          </label>
+        </div>
+
+        <!-- HAMBURGER -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!--home-->
+      <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <!--home badge-->
+            <span class="section-badge">
+              <i class="fas fa-bolt"></i>
+              Free • Fast • Secure
+            </span>
+            <!--home heading-->
+            <h1>
+              Free Online
+              <span>Image Compressor, PDF Tools &</span>
+              Image Converter
+            </h1>
+            <!--home paragraph-->
+            <p>
+              Compress JPG, PNG, WEBP images online without losing quality.
+              Convert images, resize photos, crop pictures, merge PDFs, split
+              PDFs, create Image to PDF, and edit files instantly using our
+              secure browser-based tools. No uploads, no registration,
+              completely free.
+            </p>
+            <!--quick action buttons-->
+            <div class="hero-buttons">
+              <a href="#all-tools" class="btn btn-primary"> Explore Tools </a>
+
+              <a href="#about" class="btn btn-secondary"> Learn More </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ================= ALL TOOLS ================= -->
+      <section id="all-tools" class="tools">
+        <div class="container">
+          <!-- Heading -->
+          <div class="section-heading center">
+            <span class="section-badge">All Tools</span>
+
+            <h2>
+              Everything You Need In
+              <span>One Place</span>
+            </h2>
+            <!--about paragraph-->
+            <p>
+              Fast, private, browser-based image & PDF tools. No uploads
+              required.
+            </p>
+          </div>
+
+          <!-- FILTER BUTTONS To Filter Images And PDF-->
+          <div class="tool-filter">
+            <button class="filter-btn active" data-filter="all">
+              <i class="fas fa-layer-group"></i> All Tools
+            </button>
+
+            <button class="filter-btn" data-filter="image">
+              <i class="fas fa-image"></i> Image
+            </button>
+
+            <button class="filter-btn" data-filter="pdf">
+              <i class="fas fa-file-pdf"></i> PDF
+            </button>
+          </div>
+
+          <!-- GRID -->
+          <div class="tools-grid">
+            <!-- ================= Image TOOLS ================= -->
+            <a
+              href="#workspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="compress"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-compress-alt"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Compress Image</h4>
+              <p>Reduce image size without losing quality.</p>
+            </a>
+
+            <a
+              href="#workspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="convert"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-right-left"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Convert Image</h4>
+              <p>Quickly convert images between JPG, PNG, and WEBP.</p>
+            </a>
+
+            <a
+              href="#workspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="crop"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-crop-simple"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Crop Image</h4>
+              <p>Crop images with precision and complete control.</p>
+            </a>
+
+            <a
+              href="#workspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="resize"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-expand"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Resize Image</h4>
+              <p>Resize images by pixels or percentage.</p>
+            </a>
+
+            <a
+              href="#workspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="rotate"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-rotate-right"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Rotate / Flip Image</h4>
+              <p>Rotate and flip images quickly without losing quality.</p>
+            </a>
+
+            <a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="image-to-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-file-image"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Image to PDF</h4>
+              <p>Convert up to 20 images into a single PDF instantly.</p>
+            </a>
+
+            <!--<a href="#workspace" class="tool-card" data-category="image">
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-signature"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Watermark Image</h4>
+              <p>Add watermark to protect images.</p>
+            </a>-->
+
+            <a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="image"
+              data-tool="merge-images"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-object-group"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Merge Images</h4>
+              <p>Merge images into a single collage instantly.</p>
+            </a>
+
+            <!--<a href="#workspace" class="tool-card" data-category="image">
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-wand-magic-sparkles"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">IMAGE</span>
+                </div>
+              </div>
+              <h4>Remove Background</h4>
+              <p>Remove image background instantly.</p>
+            </a>-->
+
+            <!-- ================= PDF TOOLS ================= -->
+
+            <a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="merge-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-file-circle-plus"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Merge PDF</h4>
+              <p>Merge multiple PDF files into one seamless document.</p>
+            </a>
+
+            <a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="split-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-scissors"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Split PDF</h4>
+              <p>
+                Extract individual pages or split your PDF into separate files.
+              </p>
+            </a>
+
+            <!--<a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="compress-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-file-zipper"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Compress PDF</h4>
+              <p>Reduce PDF file size quickly.</p>
+            </a>-->
+
+            <!--<a
+              href="#workspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="rotate-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-rotate"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Rotate PDF</h4>
+              <p>Rotate PDF pages easily.</p>
+            </a>-->
+
+            <!--<a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="rearrange-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-grip-lines"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Rearrange PDF</h4>
+              <p>Reorder PDF pages visually.</p>
+            </a>-->
+
+            <!--<a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="remove-pdf"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-trash-can"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Remove PDF</h4>
+              <p>Delete pages from PDF.</p>
+            </a>-->
+
+            <!--<a href="#workspace" class="tool-card" data-category="pdf">
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-stamp"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>Watermark PDF</h4>
+              <p>Add text or image watermark.</p>
+            </a>-->
+
+            <!--<a
+              href="#multiWorkspace"
+              class="tool-card"
+              data-category="pdf"
+              data-tool="pdf-to-image"
+            >
+              <div class="tool-top">
+                <div class="tool-left">
+                  <i class="fas fa-file-image"></i>
+                </div>
+                <div class="tool-right">
+                  <span class="tool-type">PDF</span>
+                </div>
+              </div>
+              <h4>PDF to Image</h4>
+              <p>Convert PDF pages to images.</p>
+            </a>-->
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= WORKSPACE ================= -->
+      <section id="workspace" class="workspace hidden">
+        <div class="container">
+          <div class="workspace-header">
+            <div>
+              <span class="section-badge">Workspace</span>
+              <h2 id="workspace-title">Compress Image</h2>
+              <p id="workspace-description">
+                Upload your image and adjust settings before downloading.
+              </p>
+            </div>
+
+            <button id="closeWorkspace" class="workspace-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="workspace-grid">
+            <!-- LEFT -->
+            <div class="workspace-preview">
+              <div class="upload-area" id="uploadArea">
+                <input type="file" id="imageInput" accept="image/*" hidden />
+
+                <i class="fas fa-cloud-upload-alt"></i>
+
+                <h3>Drop Image Here</h3>
+
+                <p>Drag & Drop or Click to Upload</p>
+
+                <button
+                  class="btn btn-primary"
+                  id="chooseImageBtn"
+                  type="button"
+                >
+                  Choose File
+                </button>
+              </div>
+
+              <div class="image-preview hidden">
+                <img id="previewImage" src="" alt="" />
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="workspace-controls">
+              <h3 id="controlsTitle">Tool Settings</h3>
+
+              <div id="controlsContent">
+                <!-- Dynamic controls will be loaded here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ========== MULTI FILE WORKSPACE ================ -->
+
+      <section id="multiWorkspace" class="multi-workspace hidden">
+        <div class="container">
+          <!-- HEADER -->
+
+          <div class="workspace-header">
+            <div>
+              <span class="section-badge"> Workspace </span>
+
+              <h2 id="multiTitle">Image to PDF</h2>
+
+              <p id="multiDescription">
+                Select multiple images to create one PDF.
+              </p>
+            </div>
+
+            <button id="closeMultiWorkspace" class="workspace-close">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <!-- MAIN -->
+
+          <div class="multi-layout">
+            <!-- LEFT -->
+
+            <div class="multi-preview">
+              <div id="multiUploadArea" class="multi-upload">
+                <input type="file" id="multiInput" multiple hidden />
+
+                <i class="fas fa-cloud-upload-alt"></i>
+
+                <h3 id="multiUploadTitle">Select Files</h3>
+
+                <p id="multiUploadDescription">Drag & Drop or Choose Files</p>
+
+                <button id="chooseFilesBtn" class="btn btn-primary">
+                  Choose Files
+                </button>
+              </div>
+              <div id="multiFileInfo" class="multi-file-info hidden">
+                0 / 20 Files Selected
+              </div>
+              <div id="multiGrid" class="multi-grid hidden">
+                <!-- Dynamic image/pdf cards -->
+              </div>
+            </div>
+
+            <!-- RIGHT -->
+
+            <aside class="multi-controls">
+              <h3 id="toolControlsTitle">Tool Settings</h3>
+
+              <div id="multiControlsContent"></div>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <!-- ================= FEATURES ================= -->
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-heading center">
+            <span class="section-badge">Features</span>
+            <h2>Why <span>IMAGEOC</span> Feels So Fast & Powerful</h2>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/yseqjcer.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>100% Private</h3>
+              <p>No uploads. Every file stays securely inside your browser.</p>
+            </div>
+
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/qhgmphtg.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>Lightning Fast</h3>
+              <p>Process images and PDFs instantly without waiting.</p>
+            </div>
+
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/fvkvwmsp.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>8+ Powerful Tools</h3>
+              <p>Compress, convert, crop, merge, split and much more.</p>
+            </div>
+
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/akuwjdzh.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>Zero Installation</h3>
+              <p>Works on any modern browser. No downloads required.</p>
+            </div>
+
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/lenjvibx.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>Modern Interface</h3>
+              <p>
+                Minimal design focused on speed, productivity and simplicity.
+              </p>
+            </div>
+
+            <div class="feature-card">
+              <lord-icon
+                src="https://cdn.lordicon.com/vzxgwrux.json"
+                trigger="loop"
+                delay="2000"
+                colors="primary:#6366f1,secondary:#a855f7"
+                style="width: 60px; height: 60px"
+              >
+              </lord-icon>
+
+              <h3>Fully Responsive</h3>
+              <p>
+                Enjoy the same smooth experience on desktop, tablet and mobile.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ABOUT ================= -->
+      <section id="about" class="about">
+        <div class="container about-container">
+          <div class="about-grid">
+            <!-- LEFT CONTENT -->
+            <div class="section-heading">
+              <span class="section-badge">About IMAGEOC</span>
+
+              <h2>
+                A Fast, Private & Powerful
+                <span>Browser-Based Tool Suite</span>
+              </h2>
+
+              <p>
+                IMAGEOC is a lightweight, fully frontend-based platform designed
+                to handle everyday image and PDF tasks directly in your browser.
+                No uploads. No servers. No delays.
+              </p>
+
+              <p>
+                Everything runs locally using JavaScript, giving you complete
+                privacy and instant processing for your files.
+              </p>
+
+              <div class="about-stats">
+                <div class="stat">
+                  <h3>100%</h3>
+                  <p>Browser Based</p>
+                </div>
+
+                <div class="stat">
+                  <h3>0</h3>
+                  <p>Uploads Required</p>
+                </div>
+
+                <div class="stat">
+                  <h3>∞</h3>
+                  <p>Unlimited Use</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT VISUAL -->
+            <div class="about-visual">
+              <div class="about-card">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Privacy First</h4>
+                <p>All processing happens locally in your browser.</p>
+              </div>
+
+              <div class="about-card">
+                <i class="fas fa-bolt"></i>
+                <h4>Fast Processing</h4>
+                <p>No server delay. Instant results.</p>
+              </div>
+
+              <div class="about-card">
+                <i class="fas fa-sliders-h"></i>
+                <h4>Powerful Tools</h4>
+                <p>Image + PDF utilities in one place.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <img
+              src="photo/imageoc-white.jpeg"
+              alt="IMAGE OC Logo"
+              class="logo-img logo-light"
+            />
+            <img
+              src="photo/imageoc-black.jpeg"
+              alt="IMAGE OC Logo"
+              class="logo-img logo-dark"
+            />
+          </a>
+          <p>
+            Fast, secure, browser-based image and PDF tools designed for
+            creators, students, professionals, and everyone who values privacy.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h5>Navigation</h5>
+          <ul>
+            <li><a href="#all-tools" class="nav-link">Tools</a></li>
+
+            <li><a href="#features" class="nav-link">Features</a></li>
+
+            <li><a href="#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-support">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="pages/faq.html#faq" class="nav-link">FAQ</a></li>
+            <li>
+              <a href="pages/contact.html#contact" class="nav-link">Contact</a>
+            </li>
+            <li>
+              <a href="pages/privacy.html#privacy" class="nav-link"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="pages/terms-services.html#terms" class="nav-link"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socials">
+          <h5>Connect With Us</h5>
+
+          <!-- First Row -->
+          <div class="social-row">
+            <a
+              href="https://github.com/brijeshsingh16"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a href="mailto:contact.imageoc@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/bsingh16/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Second Row -->
+          <div class="social-row">
+            <a
+              href="https://www.instagram.com/imageoc.official/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://x.com/imageoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container bottom-flex">
+          <p>
+            &copy; <span id="year"></span> ImageOC — Free Online Image & PDF
+            Tools. All rights reserved.
+          </p>
+          <p class="location-tag">Based in India</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= SCRIPT ================= -->
+    <!-- Core -->
+    <script src="js/theme.js"></script>
+    <script src="js/active-nav.js"></script>
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/year.js"></script>
+    <script src="js/tools-filter.js"></script>
+
+    <!-- Workspace Controller -->
+    <script src="js/workspace.js"></script>
+
+    <!-- Common Workspace Features -->
+    <script src="js/preview.js"></script>
+    <script src="js/upload.js"></script>
+
+    <script src="js/download.js"></script>
+
+    <!-- Image Tools -->
+    <script src="js/image-js/compress.js"></script>
+    <script src="js/image-js/convert.js"></script>
+    <script src="js/image-js/crop.js"></script>
+    <script src="js/image-js/resize.js"></script>
+    <script src="js/image-js/rotate.js"></script>
+    <script src="js/image-js/image-to-pdf.js"></script>
+    <script src="js/image-js/merge-images.js"></script>
+
+    <!-- PDF Tools -->
+    <script src="js/pdf-js/merge-pdf.js"></script>
+    <script src="js/pdf-js/split-pdf.js"></script>
+
+    <!-- External -->
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+  </body>
+</html>

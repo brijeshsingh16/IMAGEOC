@@ -1,0 +1,172 @@
+.tools
+{
+    padding:120px 0  20px;
+}
+
+.tools-grid
+{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:1.5rem;
+}
+
+.section-heading p
+{
+    max-width:700px;
+    margin:1.2rem auto 0;
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+.tool-filter
+{
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    margin:3rem 0 4rem;
+    flex-wrap:wrap;
+}
+
+.filter-btn
+{
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+
+    padding:.85rem 1.6rem;
+
+    border-radius:999px;
+
+    border:1px solid var(--border);
+
+    background:rgba(255,255,255,.03);
+
+    color:var(--text-secondary);
+
+    cursor:pointer;
+
+    transition:var(--transition);
+}
+
+.filter-btn:hover
+{
+    border-color:var(--accent);
+    color:var(--text-primary);
+}
+
+.filter-btn.active
+{
+    background:linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-secondary)
+    );
+
+    color:#fff;
+
+    border-color:transparent;
+}
+.tool-card
+{
+    padding:1.6rem;
+
+    border-radius:16px;
+
+    border:1px solid var(--border);
+
+    background:rgba(255,255,255,.02);
+
+    transition:var(--transition);
+
+    cursor:pointer;
+     display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tool-card i
+{
+    font-size:1.8rem;
+
+    color:var(--accent);
+
+    margin-bottom:1rem;
+
+    transition:transform .3s ease;
+}
+
+.tool-card h4
+{
+    margin-bottom:.6rem;
+}
+
+.tool-card p
+{
+    font-size:.95rem;
+    color:var(--text-secondary);
+}
+
+/* Hover */
+.tool-card:hover
+{
+    transform:translateY(-8px);
+
+    border-color:rgba(99,102,241,.35);
+
+    background:rgba(255,255,255,.04);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.tool-card:hover i
+{
+    transform:scale(1.2);
+}
+.tool-top
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-bottom:1rem;
+}
+
+/* LEFT SIDE ICON ONLY */
+.tool-left
+{
+    display:flex;
+    align-items:center;
+}
+
+.tool-left i
+{
+    font-size:1.25rem;
+    color:var(--accent);
+
+    transition:var(--transition);
+}
+
+/* RIGHT BADGE */
+.tool-right
+{
+    display:flex;
+    align-items:center;
+}
+.tool-type
+{
+    display:inline-block;
+    padding:.3rem .8rem;
+
+    margin-bottom:1rem;
+
+    border-radius:999px;
+
+    background:rgba(99,102,241,.15);
+
+    color:var(--accent);
+
+    font-size:.7rem;
+
+    font-weight:700;
+
+    letter-spacing:.08em;
+}
