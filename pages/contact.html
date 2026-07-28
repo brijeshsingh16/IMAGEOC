@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | IMAGEOC</title>
+    <link rel="icon" type="image/png" href="../image/imageoc.png" />
+    <meta
+      name="description"
+      content="Compress images, convert JPG PNG WEBP, crop, resize, merge PDF, split PDF and create Image to PDF online. 100% browser based. Secure. Fast. Free."
+    />
+
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://imageoc.com/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IMAGEOC - Free Image & PDF Tools" />
+
+    <meta
+      property="og:description"
+      content="Compress images, convert formats, merge PDFs, split PDFs and more."
+    />
+
+    <meta property="og:image" content="../image/imageoc-white.jpeg" />
+    <meta property="og:image" content="../image/imageoc-black.jpeg" />
+
+    <meta property="og:url" content="https://imageoc.com/" />
+
+    <meta property="og:site_name" content="IMAGEOC" />
+
+    <meta name="twitter:title" content="../image/imageoc-white.jpeg" />
+
+    <meta name="twitter:title" content="IMAGEOC" />
+
+    <meta name="twitter:description" content="Free Online Image & PDF Tools." />
+
+    <meta
+      name="twitter:image"
+      content="https://imageoc.com/../image/imageoc-white.jpeg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "IMAGEOC",
+        "url": "https://imageoc.com",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "description": "Free online Image and PDF tools including Compress Image, Resize Image, Crop Image, Merge PDF, Split PDF and Image to PDF.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD/INR"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "IMAGEOC",
+        "url": "https://imageoc.com",
+        "logo": "https://imageoc.com/../image/imageoc-white.jpeg",
+        "sameAs": [
+          "https://twitter.com/...",
+          "https://facebook.com/...",
+          "https://linkedin.com/..."
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://imageoc.com",
+        "name": "IMAGEOC",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://imageoc.com/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <!-- Main CSS -->
+    <!-- Light CSS (Enabled by default) -->
+    <link
+      id="light-theme"
+      rel="stylesheet"
+      href="../light-css/main.css"
+      media="all"
+    />
+    <link rel="stylesheet" href="support-css/main.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="main-header">
+      <div class="header-container">
+        <!-- LOGO -->
+        <a href="../index.html" class="logo">
+          <img
+            src="../image/imageoc-white.jpeg"
+            alt="IMAGEOC"
+            class="logo-img logo-light"
+          />
+          <img
+            src="../image/imageoc-black.jpeg"
+            alt="IMAGEOC"
+            class="logo-img logo-dark"
+          />
+        </a>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar" id="navbar" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="../index.html#all-tools" class="nav-link">Tools</a>
+            </li>
+
+            <li>
+              <a href="../index.html#features" class="nav-link">Features</a>
+            </li>
+
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+          </ul>
+        </nav>
+
+        <!-- HAMBURGER -->
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+    <!-- ================= CONTACT ================= -->
+
+    <section class="info-page" id="contact">
+      <div class="container">
+        <div class="section-heading center">
+          <span class="section-badge">
+            <i class="fas fa-envelope-open-text"></i>
+            Contact Us
+          </span>
+
+          <h2>Let's Start a <span>Conversation !</span></h2>
+
+          <p>
+            Have questions, suggestions, feedback, or found a bug? We'd love to
+            hear from you. Fill out the form below and we'll get back to you as
+            soon as possible.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          <!-- LEFT -->
+
+          <div class="contact-info">
+            <img
+              src="photo/Get in touch.gif"
+              alt="Contact Illustration"
+              class="contact-image"
+            />
+
+            <div class="info-section">
+              <div class="info-header">
+                <i class="fas fa-comments"></i>
+                <h3>Why Contact IMAGEOC?</h3>
+              </div>
+
+              <div class="info-card">
+                <h4>
+                  <i class="fas fa-lightbulb"></i>
+                  We're Always Listening
+                </h4>
+
+                <p>
+                  Whether you have feature requests, bug reports, partnership
+                  opportunities, or simply want to say hello, your feedback
+                  helps us improve IMAGEOC for everyone.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT -->
+
+          <div class="contact-form-wrapper">
+            <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+              <div class="form-grid">
+                <!-- NAME -->
+
+                <div class="form-group">
+                  <label for="name">
+                    <i class="fas fa-user"></i>
+                    Full Name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    minlength="3"
+                    maxlength="50"
+                    pattern="[A-Za-z ]+"
+                    autocomplete="name"
+                    autocapitalize="words"
+                    oninput="this.value = this.value.replace(/[^A-Za-z ]/g, '')"
+                    required
+                  />
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+                  <label for="email">
+                    <i class="fas fa-envelope"></i>
+                    Email Address
+                  </label>
+
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                    maxlength="100"
+                    autocomplete="email"
+                    required
+                  />
+                </div>
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+                  <label for="phone">
+                    <i class="fas fa-phone"></i>
+                    Phone Number
+                  </label>
+
+                  <input
+                    type="tel"
+                    id="phone"
+                    required
+                    placeholder="+91 1234567890"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    maxlength="16"
+                    pattern="^\+?[0-9]{7,15}$"
+                    oninput="
+                      this.value = this.value
+                        .replace(/[^0-9+]/g, '')
+                        .replace(/(?!^)\+/g, '')
+                    "
+                  />
+                </div>
+
+                <!-- COUNTRY -->
+
+                <div class="form-group">
+                  <label for="country">
+                    <i class="fas fa-earth-asia"></i>
+                    Country
+                  </label>
+
+                  <select id="country" autocomplete="country-name" required>
+                    <option value="">Select Country</option>
+
+                    <option value="India">India</option>
+                    <option value="United States">United States</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- SUBJECT -->
+
+              <div class="form-group">
+                <label for="subject">
+                  <i class="fas fa-tag"></i>
+                  Subject
+                </label>
+
+                <input
+                  type="text"
+                  id="subject"
+                  placeholder="What is this regarding?"
+                  maxlength="80"
+                  autocomplete="off"
+                  autocapitalize="sentences"
+                  required
+                />
+              </div>
+
+              <!-- MESSAGE -->
+
+              <div class="form-group">
+                <label for="message">
+                  <i class="fas fa-pen"></i>
+                  Write Your Message
+                </label>
+
+                <textarea
+                  id="message"
+                  rows="7"
+                  minlength="10"
+                  maxlength="1000"
+                  placeholder="Tell us how we can help you..."
+                  required
+                ></textarea>
+              </div>
+
+              <!-- BUTTON -->
+
+              <button class="btn btn-primary" type="submit">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo">
+            <img
+              src="../image/imageoc-white.jpeg"
+              alt="IMAGEOC"
+              class="logo-img logo-light"
+            />
+            <img
+              src="../image/imageoc-black.jpeg"
+              alt="IMAGEOC"
+              class="logo-img logo-dark"
+            />
+          </a>
+          <p>
+            Fast, secure, browser-based image and PDF tools designed for
+            creators, students, professionals, and everyone who values privacy.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <h5>Navigation</h5>
+          <ul>
+            <li>
+              <a href="../index.html#all-tools" class="nav-link">Tools</a>
+            </li>
+
+            <li>
+              <a href="../index.html#features" class="nav-link">Features</a>
+            </li>
+
+            <li><a href="../index.html#about" class="nav-link">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div class="footer-support">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="faq.html#faq" class="nav-link">FAQ</a></li>
+            <li><a href="contact.html#contact" class="nav-link">Contact</a></li>
+            <li>
+              <a href="privacy.html#privacy" class="nav-link">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="terms-services.html#terms" class="nav-link"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-socials">
+          <h5>Connect With Us</h5>
+
+          <!-- First Row -->
+          <div class="social-row">
+            <a
+              href="https://github.com/brijeshsingh16"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a href="mailto:contact.imageoc@gmail.com" aria-label="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/bsingh16/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+
+          <!-- Second Row -->
+          <div class="social-row">
+            <a
+              href="https://www.instagram.com/imageoc.official/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a
+              href="https://x.com/imageoc"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container bottom-flex">
+          <p>
+            &copy; <span id="year"></span> ImageOC — Free Online Image & PDF
+            Tools. All rights reserved.
+          </p>
+          <p class="location-tag">Based in India</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ================= SCRIPT ================= -->
+    <!-- Core -->
+    <script src="../js/active-nav.js"></script>
+    <script src="../js/mobile-menu.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="../js/year.js"></script>
+  </body>
+</html>
